@@ -141,15 +141,7 @@
                     let bottomLoaderHeight = 0;
                     const container = this.$refs.scrollContainer;
                     const initialScrollTop = container.scrollTop;
-                    for (let i = 0; i < 20; i++) {
-                        setTimeout(() => {
-                            bottomLoaderHeight = Math.max(
-                                bottomLoaderHeight,
-                                this.$refs.bottomLoader.getBoundingClientRect().height
-                            );
-                            container.scrollTop = initialScrollTop + bottomLoaderHeight;
-                        }, i * 50);
-                    }
+                   
                 }
 
                 const callbacks = [this.waitOneSecond(), this.onReachEdge ? this.onReachEdge(dir) : noop()];
